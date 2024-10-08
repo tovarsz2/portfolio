@@ -669,6 +669,9 @@ span{
   .testimonials .wrapper{
     grid-template-columns: repeat(1, 1fr);
   }
+  .home-content h3{
+    font-size: 3.1rem;
+  }
   .contact form{
     flex-direction: column;
   }
@@ -707,8 +710,7 @@ span{
     margin: 5rem 4rem;
   }
   .home-content h3{
-    font-size: 8rem;
-    margin-top: 3rem;
+    font-size: 2.6rem;
   }
   .home-content h1{
     font-size: 8rem;
