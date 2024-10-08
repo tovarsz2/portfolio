@@ -194,14 +194,14 @@ span{
   gap: 1.5rem;
 }
 
-.btn-gruop a:nth-of-type(1){
+.btn-gruop a:nth-of-type(1) .btn{
   background-color: black;
   color: var(--main-color);
   border: 2px solid var(--main-color);
   box-shadow: 0 0 25px transparent;
 }
 
-.btn-gruop a:nth-of-type(1):hover{
+.btn-gruop a:nth-of-type(1):hover .btn{
   box-shadow: 0 0 25px var(--main-color);
   background-color: var(--main-color);
   color: black;
