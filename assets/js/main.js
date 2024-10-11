@@ -15,13 +15,32 @@ window.onscroll = () => {
 			navLinks.forEach(links => {
 				links.classList.remove('active');
 				document.querySelector('header nav a[href*=' + id + ' ]')
-				.classList.add('active')
-			})
+				.classList.add('active');
+			});
 		}
 	})
 }
 
 menuIcon.onclick = () => {
-	menuIcon.classList.toggle('bx-x')
-	navbar.classList.toggle('active')
+	menuIcon.classList.toggle('bx-x');
+	navbar.classList.toggle('active');
+}
+
+window.addEventListener('click', function(e){
+	if(!document.querySelector('#menu-icon').contains(e.target)){
+		menuIcon.classList.toggle('bx-x');
+		navbar.classList.toggle('active');
+	}
+})
+
+var copybtn = document.getElementById("copy-btn");
+var email = document.getElementById("email");
+
+copybtn.onclick = () => {
+	navigator.clipboard.writeText(email.innerHTML);
+	copybtn.innerHTML = "<i id='check' class='bx bxs-check-square' ></i>"
+	setTimeout(function(){
+		copybtn.innerHTML = "<i class='bx bxs-copy'></i>"
+	}, 2000)
+
 }
