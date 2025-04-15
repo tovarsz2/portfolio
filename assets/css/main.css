@@ -6,7 +6,8 @@
   border: none;
   outline: none;
   scroll-behavior: smooth;
-  font-family: "Poppins", sans-serif;
+  font-family: ui-sans-serif,system-ui,sans-serif;
+  
 }
 
 :root {
@@ -31,7 +32,7 @@ body{
   top: 0;
   left: 0;
   width: 100%;
-  padding: 4rem 12% 4rem;
+  padding: 2rem 12% 2rem;
   background: rgba(0,0,0,0.3);
   backdrop-filter: blur(10px);
   display: flex;
@@ -79,7 +80,7 @@ body{
 
 section{
   min-height: 100vh;
-  padding: 10rem 8% 10rem;
+  padding: 0rem 8% 10rem;
 }
 
 .home{
@@ -95,7 +96,7 @@ section{
   align-items: baseline;
   text-align: left;
   justify-content: center;
-  margin-top: 3rem;
+  margin-top: 5rem;
 }
 
 span{
@@ -121,6 +122,7 @@ span{
 
 .home-img{
   border-radius: 50%;
+  margin-top: 5rem;
 }
 
 .home-img img{
@@ -166,6 +168,25 @@ span{
   transform: scale(1.3)translateY(-5px);
   box-shadow: 0 0 25px var(--main-color);
   background-color: var(--main-color);
+}
+
+.card-icons a{
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 2.5rem;
+  height: 2.5rem;
+  background: transparent;
+  font-size: 2.5rem;
+  border-radius: 50%;
+  color: white;
+  margin: 0rem 0rem 0rem 0;
+  transition: 0.3s ease-in-out;
+}
+
+.card-icons a:hover{
+  color: var(--text-color);
+  transform: scale(1.3)translateY(-5px);
 }
 
 .btn{
@@ -219,7 +240,7 @@ span{
   border: transparent;
 }
 
-#email{
+#myemail{
   padding: 12px 10px;
   background-color: #fff;
   border-radius: 10px;
@@ -227,7 +248,7 @@ span{
   overflow: scroll;
 }
 
-#email::-webkit-scrollbar{
+#myemail::-webkit-scrollbar{
   display: none;
 }
 
@@ -344,8 +365,8 @@ span{
 .proyects-box img{
   width: 15rem;
   border-radius: 50%;
-  border: 3px solid var(--main-color);
-  box-shadow: 0 0 25px var(--main-color);
+  border: 3px solid var(--bg-color);
+  box-shadow: 0 0 10px var(--bg-color);
 }
 
 .wrapper{
@@ -355,21 +376,21 @@ span{
 }
 
 .proyect-item{
-  min-height: 550px;
+  min-height: 450px;
   max-width: 450px;
-  background: rgba(0, 0, 0, 0.7);
+  background: #3ddc85cf;;
   border: 3px solid rgba(238, 238, 238, 0.2);
   border-radius: 2rem;
   margin: 0 2rem;
-  padding: 30px 60px;
+  padding: 30px 40px;
   cursor: pointer;
   display: flex;
-  flex-direction: column;
   align-items: center;
+  flex-direction: column;
+  text-align: justify;
   justify-content: center;
-  text-align: center;
   gap: 1.5rem;
-  color: white;
+  color: var(--second-bg-color);
   transition: 0.4s ease-in-out;
 }
 
@@ -381,10 +402,23 @@ span{
 
 .proyect-item h2{
   font-size: 2.8rem;
+  color: var(--second-bg-color);
+  align-self: center;
+}
+
+.proyect-item div{
+  align-self: self-start;
 }
 
 .proyect-item p{
-  font-size: 1.3rem;
+  font-size: 1.4rem;
+  color: rgba(255, 255, 255, 0.8);
+  align-self: self-start;
+}
+
+.proyect-item p strong{
+  font-size: 1.4rem;
+  color: white
 }
 
 #star{
@@ -626,6 +660,7 @@ span{
 }
 
 .contact form .input-box input,
+.contact form button,
 .contact form textarea{
   width: 100%;
   padding: 2.5rem;
@@ -638,8 +673,68 @@ span{
   resize: none;
 }
 
-.contact form .btn{
-  margin-top: 2rem;
+.contact form .input-group-2 {
+  width: 50%;
+}
+
+.contact form .input-group-2 span {
+  align-items: center;
+}
+
+.contact form button {
+  position: relative;
+  color: var(--second-bg-color);
+  padding: 15px 45px;
+  width: 50%;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.5rem;
+  border-radius: 15px;
+  background: var(--main-color);
+  cursor: pointer;
+  outline: none;
+  transition: 200ms;
+
+  &.animate {
+    color: transparent;
+  outline: none;
+  border: 2px solid transparent;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  padding: 15px 15px;
+  border-left: 2px solid #ffffff;
+  animation: spin 2s 500ms forwards;
+  }
+}
+
+.contact form button i {
+  font-size: 2.5rem;
+  position: absolute;
+  color: transparent;
+  transition: 200ms;
+
+  &.animate {
+    animation: check 300ms 2250ms forwards;
+  }
+}
+
+@keyframes spin {
+  80% {
+    border: 2px solid transparent;
+    border-left: 2px solid #ffffff;
+  }
+  100% {
+    transform: rotate(20deg);
+    border: 2px solid #ffffff;
+  }
+}
+
+@keyframes check {
+  to {
+    color: #ffffff;
+  }
 }
 
 .footer{
